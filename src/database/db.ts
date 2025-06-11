@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 export async function connect() {
     try {
-        await mongoose.connect(process.env.NEXT_PUBLIC_MONGODB_URI || "mongodb://localhost:27017", {
-            dbName: "Waste-Easy",
+        await mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017", {
+            dbName: "ClearCycle",
         });
         const connection = mongoose.connection;
 

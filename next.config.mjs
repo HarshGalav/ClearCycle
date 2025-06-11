@@ -1,12 +1,11 @@
 import withPWAInit from "next-pwa";
 const withPWA = withPWAInit({
-    dest: 'public'
-})
-
+    dest: "public",
+});
 
 export default withPWA({
     pwa: {
-        dest: 'public',
+        dest: "public",
         register: true,
         skipWaiting: true,
     },
@@ -17,7 +16,8 @@ export default withPWA({
                 hostname: "**",
             },
         ],
-    }, experimental: {
+    },
+    experimental: {
         missingSuspenseWithCSRBailout: false,
-    }
-})
+    },
+});
